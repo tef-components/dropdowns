@@ -1,11 +1,11 @@
 {
-  "name": "all",
+  "name": "dropdowns",
   "version": "0.1.1",
-  "homepage": "https://github.com/tef-components/all",
+  "homepage": "https://github.com/tef-components/dropdowns",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - all",
+  "description": "TEF components - dropdowns",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -18,10 +18,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "button-groups": "tef-components/button-groups",
-    "buttons": "tef-components/buttons",
-    "icons": "tef-components/icons",
-    "inputs": "tef-components/inputs",
-    "layout": "tef-components/layout"
+    "icons": "tef-components/icons"
   }
 }

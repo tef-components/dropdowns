@@ -1,0 +1,96 @@
+// TEF components - dropdowns
+@import 'mixins.less';
+@import 'variables.less';
+
+.tef-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 330px;
+  background-color: transparent;
+  box-sizing: border-box;
+  .truncate();
+
+  &:before {
+    position: absolute;
+    font-family: "icons";
+    content: "angle_down";
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 24px;
+    -webkit-font-smoothing: antialiased;
+    top: 50%;
+    right: 0;
+    width: 40px;
+    pointer-events: none;
+    text-align: center;
+    margin-top: -10px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 330px;
+    background-image: none;
+    background-color: @grey1;
+    color: black;
+    font-family: @family;
+    font-size: 15px;
+    line-height: normal;
+    font-weight: normal;
+    border-radius: 4px;
+    padding: 7px 40px 7px 9px;
+    border: 1px solid @grey2;
+    cursor: pointer;
+
+    // states
+    &:hover,
+    &:focus,
+    &:active {
+      padding: 6px 39px 6px 8px;
+      border: 2px solid @significant;
+      outline: none;
+    }
+  }
+
+  // remove dotted outline
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 black;
+  }
+
+  //sizes
+  &.small {
+    &:before {
+      font-size: 18px;
+      margin-top: -9px;
+    }
+
+    select { font-size: 11px; }
+  }
+
+  &.large {
+    &:before {
+      font-size: 30px;
+      margin-top: -15px;
+    }
+
+    select { font-size: 24px; }
+  }
+}
+
+// firefox hacks to fix component height
+@-moz-document url-prefix() {
+  .tef-dropdown {
+    &:before { margin-top: -12px; }
+    select { font-size: 14px; }
+    &.small {
+      select { font-size: 10px; }
+    }
+    &.large {
+      select { font-size: 22px; }
+    }
+  }
+}

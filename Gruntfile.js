@@ -8,10 +8,10 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "css/inputs.css": "less/inputs.less",
-          "css/inputs.movistar.css": "less/movistar.less",
-          "css/inputs.o2.css": "less/o2.less",
-          "css/inputs.vivo.css": "less/vivo.less"
+          "css/dropdowns.telefonica.css": "less/dropdowns.less",
+          "css/dropdowns.movistar.css": "less/movistar.less",
+          "css/dropdowns.o2.css": "less/o2.less",
+          "css/dropdowns.vivo.css": "less/vivo.less"
         }
       },
       production: {
@@ -21,10 +21,10 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "css/inputs.min.css": "less/inputs.less",
-          "css/inputs.movistar.min.css": "less/movistar.less",
-          "css/inputs.o2.min.css": "less/o2.less",
-          "css/inputs.vivo.min.css": "less/vivo.less"
+          "css/dropdowns.telefonica.min.css": "less/dropdowns.less",
+          "css/dropdowns.movistar.min.css": "less/movistar.less",
+          "css/dropdowns.o2.min.css": "less/o2.less",
+          "css/dropdowns.vivo.min.css": "less/vivo.less"
         }
       }
     },

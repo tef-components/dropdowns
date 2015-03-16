@@ -1,3 +1,3 @@
-# TEF inputs
+# TEF dropdowns
 
-Preview all buttons: [http://tef-components.github.io/inputs/index.html](http://tef-components.github.io/inputs/index.html)
+Preview all dropdowns: [http://tef-components.github.io/dropdowns/index.html](http://tef-components.github.io/dropdowns/index.html)

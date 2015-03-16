@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link id="themeFile" rel="stylesheet" href="css/inputs.min.css">
+    <link id="themeFile" rel="stylesheet" href="css/dropdowns.min.css">
     <link rel="stylesheet" href="../icons/icons.css">
-    <link id="themeButtons" rel="stylesheet" href="../buttons/css/buttons.min.css">
+    <link rel="stylesheet" href="../inputs/css/inputs.telefonica.min.css">
+    <link rel="stylesheet" href="../dropdowns/css/dropdowns.telefonica.min.css">
+    <link id="themeButtons" rel="stylesheet" href="../buttons/css/buttons.telefonica.min.css">
 
     <style>
       body {
@@ -36,7 +38,7 @@
   </head>
   <body>
     <header>
-      <h1>TEF inputs</h1>
+      <h1>TEF dropdowns</h1>
       <span>Change theme</span>
       <select id="themeSelector">
         <option value="telefonica">Telefónica</option>
@@ -46,211 +48,70 @@
       </select>
     </header>
 
-    <h2>Input type text</h2>
-    <div class="tef-input">
-      <input type="text" placeholder="input">
-    </div>
+    <h2>Select</h2>
+      <input type="text" class="tef-input">
+    <span class="tef-dropdown">
+      <select>
+        <option value="option1">option 1</option>
+        <option value="option2">option 2</option>
+        <option value="option3">option 3</option>
+      </select>
+    </span>
+
+        <a class="tef-button">a</a>
+        <button class="tef-button">hola</button>
     <code>
       <style>
-        <div class="tef-input">
-          <input type="text" placeholder="input">
-        </div>
+        <select class="tef-dropdown">
+          <option value="option1">option 1</option>
+          <option value="option2">option 2</option>
+          <option value="option3">option 3</option>
+        </select>
       </style>
     </code>
 
-    <div class="tef-input">
-      <label>Label</label>
-      <input type="text" value="input">
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <label>Label</label>
-          <input type="text" value="input">
-        </div>
-      </style>
-    </code>
-
-    <h2>Sizes</h2>
-    <div class="tef-input">
-      <input class="small" type="text" value="Small input">
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <input class="small" type="text" value="Small input">
-        </div>
-      </style>
-    </code>
-    <div class="tef-input">
-      <input class="large" type="text" value="Large input">
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <input class="large" type="text" value="Large input">
-        </div>
-      </style>
-    </code>
-
-    <h2>Icons</h2>
-    <div class="tef-input">
-      <input class="small icon" type="text" value="Search">
-      <i data-icon="search"></i>
-    </div>
-    <div class="tef-input">
-      <input class="icon" type="text" value="Small search">
-      <i data-icon="search"></i>
-    </div>
-    <div class="tef-input">
-      <input class="large icon" type="text" value="Large search">
-      <i data-icon="search"></i>
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <input class="small icon" type="text" value="Search">
-          <i data-icon="search"></i>
-        </div>
-      </style>
-    </code>
-
-    <h2>Validations</h2>
-    <div class="tef-input has-succeeded">
-      <label>Label</label>
-      <input type="text" value="text">
-      <div class="tef-validation">
-        This field is valid
+    <h2>Select sizes</h2>
+    <div class="tef-form-row">
+      <div class="tef-dropdown small">
+        <select>
+          <option value="option1">option 1</option>
+          <option value="option2">option 2</option>
+          <option value="option3">option 3</option>
+        </select>
       </div>
+        <a class="tef-button small">a</a>
+        <button class="tef-button small">hola</button>
+    </div>
+    <div class="tef-form-row">
+      <div class="tef-dropdown large">
+        <select>
+          <option value="option1">option 1</option>
+          <option value="option2">option 2</option>
+          <option value="option3">option 3</option>
+        </select>
+      </div>
+        <a class="tef-button large">a</a>
+        <button class="tef-button large">hola</button>
     </div>
     <code>
       <style>
-        <div class="tef-input has-succeeded">
-          <label>Label</label>
-          <input type="text" value="text">
-          <div class="tef-validation">
-            This field is valid
-          </div>
+        <div class="tef-dropdown small">
+          <select>...</select>
+        </div>
+        <div class="tef-dropdown large">
+          <select>...</select>
         </div>
       </style>
     </code>
 
-    <div class="tef-input has-warning">
-      <label>Label</label>
-      <input type="text" value="text">
-      <div class="tef-validation">
-        This field has a warning
-      </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-input has-warning">
-          <label>Label</label>
-          <input type="text" value="text">
-          <div class="tef-validation">
-            This field has a warning
-          </div>
-        </div>
-      </style>
-    </code>
-
-    <div class="tef-input has-error">
-      <label>Label</label>
-      <input type="text" value="text">
-      <div class="tef-validation">
-        This field is invalid
-      </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-input has-error">
-          <label>Label</label>
-          <input type="text" value="text">
-          <div class="tef-validation">
-            This field is invalid
-          </div>
-        </div>
-      </style>
-    </code>
-
-    <h2>Grouped inputs</h2>
-    <div class="tef-input">
-      <label>User name</label>
-      <div class="tef-group">
-        <input type="text" placeholder="Enter user name">
-        <a href="" class="tef-button">anchor</a>
-      </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <label>User name</label>
-          <div class="tef-group">
-            <input type="text" placeholder="Enter user name">
-            <a href="" class="tef-button">anchor</a>
-          </div>
-        </div>
-      </style>
-    </code>
-
-    <div class="tef-input">
-      <label>User name</label>
-      <div class="tef-group">
-        <!-- we need a wrapper for the button, as buttons
-             do not support table-cell property -->
-        <div>
-          <button class="tef-button">button</button>
-        </div>
-        <input type="text" placeholder="Enter user name">
-      </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <label>User name</label>
-          <div class="tef-group">
-            <!-- we need a wrapper for the button, as buttons
-                 do not support table-cell property -->
-            <div>
-              <button class="tef-button">button</button>
-            </div>
-            <input type="text" placeholder="Enter user name">
-          </div>
-        </div>
-      </style>
-    </code>
-
-    <div class="tef-input">
-      <label>User name</label>
-      <div class="tef-group">
-        <input type="text" placeholder="Enter user name">
-        <span class="tef-button">
-          <i data-icon="plus"></i>
-        </span>
-      </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <label>User name</label>
-          <div class="tef-group">
-            <input type="text" placeholder="Enter user name">
-            <span class="tef-button">
-              <i data-icon="plus"></i>
-            </span>
-          </div>
-        </div>
-      </style>
-    </code>
 
     <script>
       var theme = document.getElementById('themeSelector');
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
         var linkButtons = document.getElementById('themeButtons');
-        var name = (theme.value == 'telefonica'? "" : theme.value + ".");
-        link.href = 'css/inputs.' + name + 'min.css';
-        linkButtons.href = '../buttons/css/buttons.' + name + 'min.css';
+        link.href = 'css/dropdowns.' + theme.value + '.min.css';
+        linkButtons.href = '../buttons/css/buttons.' + theme.value + '.min.css';
       });
     </script>
   </body>
