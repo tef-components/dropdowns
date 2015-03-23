@@ -2,52 +2,60 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt);
 
   grunt.initConfig({
-    less: {
-      development: {
-        options: {
-          optimization: 2
-        },
-        files: {
-          "css/dropdowns.telefonica.css": "less/dropdowns.less",
-          "css/dropdowns.movistar.css": "less/movistar.less",
-          "css/dropdowns.o2.css": "less/o2.less",
-          "css/dropdowns.vivo.css": "less/vivo.less"
-        }
+    bump: {
+      // upgrade release and push to master
+      options : {
+        files: ['bower.json'],
+        commitFiles: ["-a"],
+        pushTo: 'origin'
+      }
+    },
+
+    exec: {
+      // add new files before commiting
+      add: {
+        command: 'git add .'
       },
-      production: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          "css/dropdowns.telefonica.min.css": "less/dropdowns.less",
-          "css/dropdowns.movistar.min.css": "less/movistar.less",
-          "css/dropdowns.o2.min.css": "less/o2.less",
-          "css/dropdowns.vivo.min.css": "less/vivo.less"
+
+      // push to gh-pages branch
+      pages: {
+        command: [
+          'git checkout gh-pages',
+          'git pull origin master',
+          'git push origin gh-pages',
+          'git checkout master'
+        ].join('&&')
+      },
+
+      // adds prompted commit message
+      message: {
+        command: function() {
+          var message = grunt.config('gitmessage');
+          return "git commit -am '" + message + "'";
         }
       }
     },
 
-    watch: {
-      styles: {
-        files: ['less/**/*.less'],
-        tasks: ['less', 'autoprefixer'],
+    prompt: {
+      commit: {
         options: {
-          nospawn: true
+          questions: [
+            {
+              config: 'gitmessage',
+              type: 'input',
+              message: 'Commit Message'
+            }
+          ]
         }
       }
-    },
-
-    autoprefixer: {
-      options: {
-        browsers: ['last 5 versions']
-      },
-      dist: {
-        src: 'css/*.css'
-      },
-    },
+    }
   });
 
-  grunt.registerTask('default', ['less','autoprefixer','watch']);
+  grunt.registerTask('release', [
+    'exec:add',
+    'prompt',
+    'exec:message',
+    'bump',
+    'exec:pages'
+  ]);
 };
