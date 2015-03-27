@@ -4,21 +4,6 @@
 
 @import "../../utils/less/mixins.less";
 
-// Vanilla variables
-@color: #007486;
-@positive: #00c607;
-@negative: #ca3430;
-@subdued: #84959e;
-@significant: #00c6d7;
-@neutral: #84959e;
-
-@grey1: #f2f2f2;
-@grey2: #cfcece;
-@grey3: #b3b5b7;
-@grey4: #aeadad;
-@grey5: #686868;
-@grey6: #31313d;
-
 .tef-dropdown {
   position: relative;
   display: inline-block;
@@ -116,11 +101,6 @@
     text-decoration: none;
   }
 
-  span:active + ul,
-  span.active + ul {
-    display: block;
-  }
-
   //sizes
   &.small {
     &:before {
@@ -145,25 +125,38 @@
   }
 
   // options
+  &.active ul {
+    display: block;
+  }
+
   &.block {
     width: 100%;
 
     select,
     span { width: 100%; }
   }
+
+  &[data-icon] {
+    text-align: left;
+  }
+
+  &.up {
+    &:before {
+      top: -2px;
+    }
+
+    ul {
+      box-shadow: @shadowReverse;
+      top: auto;
+      bottom: 100%;
+      margin: 8px 4px 0;
+    }
+  }
 }
 
 // firefox hacks to fix component height
 @-moz-document url-prefix() {
   .tef-dropdown {
-//    &:before { margin-top: -12px; }
-//    select { font-size: 14px; }
-//    &.small {
-//      select { font-size: 10px; }
-//    }
-//    &.large {
-//      select { font-size: 22px; }
-//    }
     select {
       padding: 6px 40px 6px 9px;
 
