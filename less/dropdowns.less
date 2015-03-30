@@ -37,7 +37,7 @@
     line-height: normal;
     font-weight: normal;
     border-radius: 4px;
-    padding: 7px 40px 7px 9px;
+    padding: 8px 40px 8px 9px;
     border: 1px solid @grey2;
     cursor: pointer;
     box-sizing: border-box;
@@ -55,7 +55,7 @@
   &:active {
     select,
     span {
-      padding: 6px 39px 6px 8px;
+      padding: 7px 39px 7px 8px;
       border: 2px solid @significant;
       outline: none;
     }
@@ -109,7 +109,20 @@
     }
 
     select,
-    span,
+    span {
+      font-size: 11px;
+      padding: 6px 40px 6px 9px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      select,
+      span {
+        padding: 5px 39px 5px 8px;
+      }
+    }
+
     li { font-size: 11px; }
   }
 
@@ -120,7 +133,20 @@
     }
 
     select,
-    span,
+    span {
+      font-size: 24px;
+      padding: 7px 40px 7px 14px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      select,
+      span {
+        padding: 6px 39px 6px 13px;
+      }
+    }
+
     li { font-size: 24px; }
   }
 
@@ -157,14 +183,14 @@
 // firefox hacks to fix component height
 @-moz-document url-prefix() {
   .tef-dropdown {
-    select {
-      padding: 6px 40px 6px 9px;
-
-      &:hover,
-      &:focus,
-      &:active {
-        padding: 5px 39px 5px 8px;
-      }
-    }
+//    select {
+//      padding: 6px 40px 6px 9px;
+//
+//      &:hover,
+//      &:focus,
+//      &:active {
+//        padding: 6px 39px 6px 8px;
+//      }
+//    }
   }
 }
