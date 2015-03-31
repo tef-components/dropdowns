@@ -34,7 +34,7 @@
     background-color: @grey1;
     color: black;
     font-size: 15px;
-    line-height: normal;
+    line-height: 18px;
     font-weight: normal;
     border-radius: 4px;
     padding: 8px 40px 8px 9px;
@@ -66,6 +66,9 @@
     color: transparent;
     text-shadow: 0 0 0 black;
   }
+
+  // remove arrow in ie > 9
+  select::-ms-expand { display: none; }
 
   ul {
     display: none;
@@ -111,6 +114,7 @@
     select,
     span {
       font-size: 11px;
+      line-height: 13px;
       padding: 6px 40px 6px 9px;
     }
 
@@ -135,6 +139,7 @@
     select,
     span {
       font-size: 24px;
+      line-height: 29px;
       padding: 7px 40px 7px 14px;
     }
 
@@ -183,14 +188,29 @@
 // firefox hacks to fix component height
 @-moz-document url-prefix() {
   .tef-dropdown {
-//    select {
-//      padding: 6px 40px 6px 9px;
-//
-//      &:hover,
-//      &:focus,
-//      &:active {
-//        padding: 6px 39px 6px 8px;
-//      }
-//    }
+    select { padding: 7px 40px 6px 9px;}
+    &:hover,
+    &:focus,
+    &:active {
+      select { padding: 6px 39px 5px 8px; }
+    }
+
+    &.small {
+      select { padding: 5px 40px 4px 9px; }
+      &:hover,
+      &:focus,
+      &:active {
+        select { padding: 4px 39px 3px 8px; }
+      }
+    }
+
+    &.large {
+      select { padding: 6px 40px 6px 9px; }
+      &:hover,
+      &:focus,
+      &:active {
+        select { padding: 5px 39px 5px 8px; }
+      }
+    }
   }
 }
