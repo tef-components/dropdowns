@@ -29,11 +29,11 @@
   </head>
   <body>
     <div class="tc-wrapper tc-content">
-      <header columns="2 xs1">
+      <header data-columns="2 xs1">
         <h1>Dropdowns</h1>
         <div>
           <label>Change theme</label>
-          <div class="tc-dropdown" icon="angle_down">
+          <div class="tc-dropdown" data-icon="down">
             <select id="themeSelector">
               <option value="telefonica">Telefónica</option>
               <option value="movistar">Movistar</option>
@@ -45,7 +45,7 @@
       </header>
 
       <h2>Select</h2>
-      <div class="tc-dropdown" icon="angle_down">
+      <div class="tc-dropdown" data-icon="down">
         <select>
           <option>Option 1</option>
           <option>Option 2</option>
@@ -55,7 +55,7 @@
       <input type="text" class="tc-input">
       <code>
         <style>
-      <select class="tc-dropdown" icon="angle_down">
+      <select class="tc-dropdown" data-icon="down">
         <option>Option 1</option>
         <option>Option 2</option>
         <option>Option 3</option>
@@ -64,7 +64,7 @@
       </code>
 
       <h2>Dropdown</h2>
-      <div class="tc-dropdown" icon="angle_down">
+      <div class="tc-dropdown" data-icon="down">
         <span>Option 1</span>
         <ul>
           <li>Option 1</li>
@@ -74,7 +74,7 @@
       </div>
       <code>
         <style>
-      <div class="tc-dropdown" icon="angle_down">
+      <div class="tc-dropdown" data-icon="down">
         <span>Option 1</span>
         <ul>
           <li>Option 1</li>
@@ -86,7 +86,7 @@
       </code>
 
       <h2>Dropdown with anchors</h2>
-      <div class="tc-dropdown active" icon="angle_down">
+      <div class="tc-dropdown active" data-icon="down">
         <span>Option 1</span>
         <ul>
           <li><a href="">Option 1</a></li>
@@ -96,7 +96,7 @@
       </div>
       <code>
         <style>
-      <div class="tc-dropdown" icon="angle_down">
+      <div class="tc-dropdown" data-icon="down">
         <span>Option 1</span>
         <ul>
           <li><a href="">Option 1</a></li>
@@ -109,7 +109,7 @@
 
       <h2>Dropdown active</h2>
       <p>This component will need some extra javascript magic to toggle class "active", to show the list.</p>
-      <div class="tc-dropdown active" icon="angle_up">
+      <div class="tc-dropdown active" data-icon="up">
         <span>Option 1</span>
         <ul>
           <li>Option 1</li>
@@ -120,7 +120,7 @@
       <br><br><br><br><br>
       <code>
         <style>
-      <div class="tc-dropdown active" icon="angle_up">
+      <div class="tc-dropdown active" data-icon="up">
         <span>Option 1</span>
         <ul>
           <li>Option 1</li>
@@ -133,7 +133,7 @@
       <h2>Dropdown direction</h2>
       <p>Class "up" will change direction (don't forget to change the icon as well).</p>
       <br><br><br><br>
-      <div class="tc-dropdown up active" icon="angle_up">
+      <div class="tc-dropdown up active" data-icon="up">
         <span>Option 1</span>
         <ul>
           <li>Option 1</li>
@@ -143,7 +143,7 @@
       </div>
       <code>
         <style>
-      <div class="tc-dropdown up active" icon="angle_up">
+      <div class="tc-dropdown up active" data-icon="up">
         <span>Option 1</span>
         <ul>
           <li>Option 1</li>
@@ -156,14 +156,14 @@
       <h2>Sizes</h2>
       <div class="tc-row">
         <label>Small select / dropdown</label>
-        <div class="tc-dropdown small" icon="angle_down">
+        <div class="tc-dropdown small" data-icon="down">
           <select>
             <option>Option 1</option>
             <option>Option 2</option>
             <option>Option 3</option>
           </select>
         </div>
-        <div class="tc-dropdown small" icon="angle_down">
+        <div class="tc-dropdown small" data-icon="down">
           <span>Option 1</span>
           <ul>
             <li>Option 1</li>
@@ -174,14 +174,14 @@
       </div>
       <div class="tc-row">
         <label>Large select / dropdown</label>
-        <div class="tc-dropdown large" icon="angle_down">
+        <div class="tc-dropdown large" data-icon="down">
           <select>
             <option>option 1</option>
             <option>option 2</option>
             <option>option 3</option>
           </select>
         </div>
-        <div class="tc-dropdown large" icon="angle_down">
+        <div class="tc-dropdown large" data-icon="down">
           <span>Option 1</span>
           <ul>
             <li>Option 1</li>
@@ -192,20 +192,20 @@
       </div>
       <code>
         <style>
-      <div class="tc-dropdown small" icon="angle_down">
+      <div class="tc-dropdown small" data-icon="down">
         <select>...</select>
       </div>
 
-      <div class="tc-dropdown large" icon="angle_down">
+      <div class="tc-dropdown large" data-icon="down">
         <select>...</select>
       </div>
 
-      <div class="tc-dropdown small" icon="angle_down">
+      <div class="tc-dropdown small" data-icon="down">
         <span>Option 1</span>
         <ul>...</ul>
       </div>
 
-      <div class="tc-dropdown large" icon="angle_down">
+      <div class="tc-dropdown large" data-icon="down">
         <span>Option 1</span>
         <ul>...</ul>
       </div>
@@ -215,7 +215,7 @@
       <h2>Block</h2>
       <p>Fits the available space.</p>
       <div class="tc-row">
-        <div class="tc-dropdown block" icon="angle_down">
+        <div class="tc-dropdown block" data-icon="down">
           <select>
             <option>Option 1</option>
             <option>Option 2</option>
@@ -224,7 +224,7 @@
         </div>
       </div>
       <div class="tc-row">
-        <div class="tc-dropdown block" icon="angle_down">
+        <div class="tc-dropdown block" data-icon="down">
           <span>Option 1</span>
           <ul>
             <li>Option 1</li>
@@ -235,11 +235,11 @@
       </div>
       <code>
         <style>
-      <div class="tc-dropdown block" icon="angle_down">
+      <div class="tc-dropdown block" data-icon="down">
         <select>...</select>
       </div>
 
-      <div class="tc-dropdown block" icon="angle_down">
+      <div class="tc-dropdown block" data-icon="down">
         <span>Option 1</span>
         <ul>...</ul>
       </div>
